@@ -11,6 +11,7 @@ import cities from "../../data/cities";
 
 
 
+
 function Earth({children}) {
   const mesh = useRef();
 
@@ -56,9 +57,10 @@ useEffect(() => {
 
 
   return (
+    
      
 
-    <div className="w-[1200px] h-[1200px]">
+    <div className="w-[500px] h-[500px]">
          
 
       
@@ -84,6 +86,7 @@ useEffect(() => {
       opacity={0.05}
       />
      </mesh>
+     
       <Earth >
   {cities.map((city) => (
     <CityMarker
@@ -99,10 +102,10 @@ useEffect(() => {
     
         {showStars && (
          <Stars 
-         radius={200}
-         depth={80}
-         count={20000}
-         factor={30}
+         radius={250}
+         depth={8}
+         count={2000}
+         factor={12}
          saturation={0}
          fade
         />
